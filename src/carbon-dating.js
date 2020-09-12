@@ -8,7 +8,7 @@ module.exports = function dateSample(sampleActivity) {
     return false;
   }
 
-  const sampleActivityNumber = Number(sampleActivity);
+  const sampleActivityNumber = parseFloat(sampleActivity);
 
   if (Number.isNaN(sampleActivityNumber)) {
     return false;
@@ -21,3 +21,4 @@ module.exports = function dateSample(sampleActivity) {
 
   return Math.ceil(Math.log(MODERN_ACTIVITY / sampleActivityNumber) / k);
 };
+
